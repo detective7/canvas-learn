@@ -22,7 +22,7 @@ window.addEventListener('resize',function(){
 })
 
 window.addEventListener('click',function(){
-	init();
+	//init();
 })
 
 function randomIntFromRange(min, max){
@@ -54,8 +54,8 @@ function Particle(x, y, radius, color){
 		const lastPoint = {x: this.x, y: this.y};
 		this.radians += this.velocity;
 		//Drag effect (if you move mouse to 100px from origin point, it can only get 5px,for creat the delay animation)
-		this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.05;
-		this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.05;
+		this.lastMouse.x += (mouse.x - this.lastMouse.x) * 0.03;
+		this.lastMouse.y += (mouse.y - this.lastMouse.y) * 0.03;
 
 		this.x = this.lastMouse.x + Math.cos(this.radians) * this.distanceFromCenter;
 		this.y = this.lastMouse.y + Math.sin(this.radians) * this.distanceFromCenter;

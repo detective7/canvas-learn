@@ -66,7 +66,7 @@ Star.prototype.update = function() {
 	}
 
 	if(this.x + this.radius + this.velocity.x > canvas.width ||
-		this.x + this.radius + this.velocity.x < 0){
+		this.x - this.radius + this.velocity.x < 0){
 		this.velocity.x = -this.velocity.x * this.friction;
 	}
 	this.x += this.velocity.x;
